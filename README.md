@@ -27,4 +27,4 @@ Start the development server using `npm start`
 ## Deployment
 Build using `npm run build`
 
-Deploy using `deploy.sh dist gh-pages PhillipRC git@github.com:PhillipRC/test_pixi.git`
+Deploy using `deploy.sh dist gh-pages PhillipRC git@github.com:PhillipRC/pixijs_project.git`
