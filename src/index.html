@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PixiJS Project</title>
+  <meta charset="utf-8">
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <base href="/">
+  <style>
+
+    *, *:before, *:after {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-size: 14px;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    .app {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      align-content: stretch;
+      background: rgba(0, 0, 0, 1);
+    }
+
+    .app-header {
+      padding: 10px;
+      color: #FFF;
+      background: rgba(0, 0, 0, 1);
+    }
+
+    .app-view {
+      flex: 1;
+      background: rgba(0, 0, 255, .3);
+      overflow: auto;
+    }
+
+  </style>
+<body>
+<!--[if lt IE 10]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+  your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div class="app">
+
+  <div class="app-header">
+    PixiJS Project
+  </div>
+
+  <canvas id="pixiCanvas" class="app-view">
+  </canvas>
+
+</div>
+
+</body>
+</html>
