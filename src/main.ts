@@ -1,4 +1,5 @@
 import * as PIXI from 'pixi.js';
+import Game from './Game';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -17,66 +18,39 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     );
 
-    //Create a container object called the `stage`
-    var stage = new PIXI.Container();
-
-    //Tell the `renderer` to `render` the `stage`
-    renderer.render(stage);
-
     // set size
     renderer.autoResize = true;
-    renderer.resize(window.innerWidth, pixelViewEle.offsetHeight);
+    renderer.resize(
+        window.innerWidth,
+        pixelViewEle.offsetHeight
+    );
+
+    // handle window resize
+    window.addEventListener('resize', () => {
+        renderer.resize(window.innerWidth, pixelViewEle.offsetHeight);
+    });
 
     PIXI.loader
         .add("/pixijs_project/assets/circle.png")
         .load(setup);
 
-    var sprite: PIXI.Sprite;
-    var speedX = 1;
-    var speedY = 1;
+    // game object
+    let game: Game;
 
     function setup() {
 
-        sprite = new PIXI.Sprite(
-            PIXI.loader.resources["/pixijs_project/assets/circle.png"].texture
-        );
-
-        sprite.x = (renderer.width - sprite.width) / 2;
-        sprite.y = (renderer.height - sprite.height) / 2;
-        stage.addChild(sprite);
-        update();
-
+        // create game
+        game = new Game(renderer);
+        gameLoop();
     }
 
-    /**
-     * update stage
-     */
-    function update() {
-        sprite.x += speedX;
-        sprite.y += speedY;
+    function gameLoop() {
 
-        if (
-            (sprite.x > (renderer.width - sprite.width)) ||
-            (sprite.x < 0)
-        ) {
-            speedX = -speedX;
-        }
+        window.requestAnimationFrame(gameLoop);
 
-        if (
-            (sprite.y > (renderer.height - sprite.height)) ||
-            (sprite.y < 0)
-        ) {
-            speedY = -speedY;
-        }
+        // call game loop
+        game.loop();
 
-        renderer.render(stage);
-
-        setTimeout(update, 10);
     }
-
-    window.addEventListener('resize', () => {
-        sprite.x = sprite.y = 0;
-        renderer.resize(window.innerWidth, pixelViewEle.offsetHeight);
-    })
 
 }, false);
