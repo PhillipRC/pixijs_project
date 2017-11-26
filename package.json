@@ -9,10 +9,12 @@
   "author": "",
   "devDependencies": {
     "@types/node": "^8.0.53",
+    "@types/p2": "^0.7.30",
     "@types/pixi.js": "^4.5.4",
     "clean-webpack-plugin": "^0.1.16",
     "copy-webpack-plugin": "^4.2.3",
     "html-webpack-plugin": "^2.30.0",
+    "p2": "^0.7.1",
     "pixi.js": "^4.5.6",
     "script-loader": "^0.7.1",
     "ts-loader": "^2.3.2",
