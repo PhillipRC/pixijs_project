@@ -4,6 +4,8 @@ A boiler plate Pixi project featuring:
   * Typed superset of JavaScript that compiles to plain JavaScript
 * [PixiJS](http://www.pixijs.com/) ^4.5.6
   * 2D WebGL render
+* [p2](https://github.com/schteppe/p2.js) ^0.7.1
+  * Physics library
 
 Build based on Webpack:
 * [Webpack](https://webpack.js.org/) ^3.5
