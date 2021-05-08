@@ -16,17 +16,23 @@ Deployment based on a script:
 * [deploy.sh](https://github.com/X1011/git-directory-deploy)
 
 ## Installation
-Installed NodeJS & npm: https://nodejs.org/en/
+Installed NodeJS: https://nodejs.org/en/
 
 Either:
 * clone this repository: `git clone git@github.com:PhillipRC/test_pixi.git`
 * download a zip: https://github.com/PhillipRC/test_pixi/archive/master.zip
 
-Download dependencies by running: `npm run setup`
+Install dependencies: `npm install`
 
-Start the development server using `npm start`
+## Run Locally
+Start the development server: `npm start`
 
 ## Deployment
-Build using `npm run build`
+Build: `npm run build`
 
-Deploy using `deploy.sh dist gh-pages PhillipRC git@github.com:PhillipRC/pixijs_project.git`
+Deploy: `deploy.sh dist gh-pages PhillipRC git@github.com:PhillipRC/pixijs_project.git`
+
+[PIXIJ_PROJECT](https://philliprc.github.io/pixijs_project/)
+
+![Screen Shot](./index.png)
+
